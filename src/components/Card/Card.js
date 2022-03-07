@@ -15,6 +15,9 @@ function Card({ pokemon }) {
           <button className="Card__closeButton" onClick={ handle_toggle }>
             <img className="Card__closeButton-icon" src={ iconClose } />
           </button>
+            <div className="Card__thumbnail">
+              <img src={ pokemon.sprites.front_default } alt="thumbnail" />
+            </div>
             <div className="Card__img">
                 <img src={pokemon.sprites.other.dream_world.front_default} alt="" />
             </div>

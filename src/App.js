@@ -57,6 +57,7 @@ function App() {
       { loading ? <h1 className="loading">Actualizando...</h1> : (
         <>
           <Topbar/>
+                
             <section className="start">
               <nav className="pagination">
                 <CustomButton label="Anterior" click={prev}/>
@@ -65,7 +66,7 @@ function App() {
               <h2>Listado de Pokemons</h2>
               <div className="list-view">
                 {pokemon_data.map((pokemon) => {
-                  return <Card key={pokemon.id} pokemon={pokemon}/>
+                  return <Card key={pokemon.id} pokemon={pokemon} />
                 })}
               </div>
               <nav className="pagination">

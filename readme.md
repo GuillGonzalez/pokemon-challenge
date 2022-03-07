@@ -21,6 +21,6 @@ npm run start
 ```
 
 ## Pendiente
-- Mostrar datos completos del pokemon al hacer click en un elemento de la lista
+- Usar redux para mostrar Pokemon seleccionado en un popup
 
 - Reescribir el código usando Typescript
