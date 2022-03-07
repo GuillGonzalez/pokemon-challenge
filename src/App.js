@@ -62,9 +62,10 @@ function App() {
                 <CustomButton label="Anterior" click={prev}/>
                 <CustomButton label="Siguiente" click={next}/>
               </nav>
+              <h2>Listado de Pokemons</h2>
               <div className="list-view">
-                {pokemon_data.map((pokemon, idx) => {
-                  return <Card key={idx} pokemon={pokemon}/>
+                {pokemon_data.map((pokemon) => {
+                  return <Card key={pokemon.id} pokemon={pokemon}/>
                 })}
               </div>
               <nav className="pagination">

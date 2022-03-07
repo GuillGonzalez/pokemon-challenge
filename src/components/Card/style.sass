@@ -1,50 +1,79 @@
+@import '../../sass/variables'
+
 p 
-    margin: 0
+  margin: 0
 
 .Card 
     display: flex
+    position: relative
     background: white
-    border: 1px solid #ddd
     border-radius: 12px
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.21)
     flex-direction: column
     justify-content: center
-    padding: 12px
+    align-items: flex-start
+    padding: 24px
+    border: none
+    width: 50%
+    transition: 0.25s box-shadow
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.21)
+    cursor: pointer
+    overflow: hidden
 
-.Card__img 
-    display: flex
-    align-self: center
-    display: none
+    &.--is-selected
+      box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.21)
+      margin: 24px
+      .Card__name
+        font-size: $font-size-medium
+        border-bottom: 2px solid $pokemon-blue
+        margin-bottom: 12px
 
-.Card__name 
-    text-align: center
-    text-transform: capitalize
-    font-weight: 800
+      .Card__img, .Card__info, .Card__types
+        display: flex
+        gap: 12px
 
-.Card__types 
-    display: flex
-    justify-content: center
-    display: none
+      .Card__closeButton
+        display: block
+        opacity: 0.5
+        &:hover
+          opacity:1
 
-.Card__type 
-    padding: 5px 10px
-    margin: 10px 10px 10px 0
-    border-radius: 5px
-    color: #fff
+    .Card__img 
+      display: flex
+      align-self: center
+      display: none
 
-.Card__info 
-    margin-left: 10px
-    display: none
+    .Card__name 
+      text-align: center
+      text-transform: capitalize
+      font-weight: 800
+      color: $pokemon-blue
 
-.Card__data 
-    padding-bottom: 10px
-    display: none
+    .Card__info 
+      width: 100%
+      display: none
+      justify-content: space-between
 
-.Card__data .title 
-    font-weight: 700
-    text-transform: uppercase
-    margin-bottom: 6px
+      .Card__data 
+        padding-bottom: 10px
 
-.ability 
-    text-transform: capitalize
-    display: none
+    .Card__data .title 
+      font-weight: 700
+      margin-bottom: 6px
+
+    .ability 
+        text-transform: capitalize
+
+    .Card__closeButton
+      position: absolute
+      right:12px
+      top: 12px
+      border: none
+      -webkit-appearance: none
+      background: none
+      cursor: pointer
+      display: none
+
+      &-icon
+        width: 20px
+        height: 20px
+
